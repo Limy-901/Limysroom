@@ -1,0 +1,15 @@
+.footer{
+    text-align:center;margin-top:2rem;
+}
+.footer_button{
+    font-size:.6rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer_logo{
+    margin-top:1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+.main_logo{
+    font-family: 'Quicksand', sans-serif;
+}
