@@ -11,12 +11,11 @@
             <h5>
                 {{ target_article.writer.profile.nickname }}
             </h5>
-            <hr>
+            <hr style="margin-top:3rem;">
 
             <img style="width: 100%; border-radius: 1rem; margin: 2rem, 0;"
                     src="{{ target_article.image.url }}">
-
-            <p>
+            <p style="margin: 2rem;">
                 {{ target_article.content }}
             </p>
 
@@ -31,6 +30,12 @@
             </a>
             {% endif %}
             <hr>
+
+            {% for comment in target_article.comment.all %}
+                {% include 'commentapp/detail.html' with comment=comment %}
+            {% endfor %}
+
+            {% include 'commentapp/create.html' with article=target_article %}
         </div>
     </div>
 
