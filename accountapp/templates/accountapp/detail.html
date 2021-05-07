@@ -48,6 +48,9 @@
             </a>
             {% endif %}
         </div>
+        <div>
+            {% include 'snippets/list_limy.html' with article_list=object_list %}
+        </div>
     </div>
 
 {% endblock %}
