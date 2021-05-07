@@ -12,7 +12,9 @@
                     {{ target_user.profile.nickname }}
                     <!-- 해당 유저가 나라면 -->
                     {% if target_user == user %}
-                    <a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
+                    <a class="material-icons"
+                       style="box-shadow: 0 0 4px #ccc; border-radius: 10rem; padding: .3rem;text-decoration:none;"
+                            href="{% url 'profileapp:update' pk=target_user.profile.pk %}">
                         edit
                     </a>
                     {% endif %}
@@ -24,7 +26,9 @@
             <!-- 프로필 설정을 하지 않은 유저라면 -->
                 {% if target_user == user %}
                     <!-- 그게 나라면 -->
-                    <a href="{% url 'profileapp:create' %}">
+                    <a class="material-icons"
+                       style="box-shadow: 0 0 6px #ccc; border-radius: 10rem; padding: .3rem;text-decoration:none;"
+                       href="{% url 'profileapp:create' %}">
                         <h2 style="font-family: 'NanumSquareB'">
                         Create Profile
                         </h2>
@@ -36,15 +40,15 @@
                 {% endif %}
             {% endif %}
             {% if target_user == user %}
-            <a href="{% url 'accountapp:update' pk=target_user.pk %}">
-                <p>
-                    Change Info
-                </p>
+            <a class="material-icons"
+               style="box-shadow: 0 0 6px #ccc; border-radius: 10rem; padding: .3rem;text-decoration:none;"
+               href="{% url 'accountapp:update' pk=target_user.pk %}">
+               settings
             </a>
-            <a href="{% url 'accountapp:delete' pk=user.pk %}">
-                <p>
-                    Quit
-                </p>
+            <a class="material-icons"
+               style="box-shadow: 0 0 6px #fcc; border-radius: 10rem; padding: .3rem;text-decoration:none;"
+               href="{% url 'accountapp:delete' pk=user.pk %}">
+               cancel
             </a>
             {% endif %}
         </div>
