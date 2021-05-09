@@ -78,8 +78,11 @@ db.sqlite3
 
 .idea
 
+
+aws_limsroom.pem
+
+
 __pycache__/
 
 media/
 
-aws_limsroom.pem
